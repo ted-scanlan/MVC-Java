@@ -29,11 +29,50 @@ public class CalculatorView extends JFrame {
  
 
     }
+    
+    public int getFirstNumber(){   // gets the number inputted into the text field on the panel.
+    	return Integer.parseInt(firstNumber.getText());
+
+    	    }
+    
+    public int getSecondNumber(){   // gets the number inputted into the text field on the panel.
+    	return Integer.parseInt(secondNumber.getText());
+
+    	    }
+    
+    public int getCalcSolution(){   // gets the number inputted into the text field on the panel.
+    	return Integer.parseInt(calcSolution.getText());
+
+    	    }
+    
+    public void setCalcSolution(int solution){
+    	
+        calcSolution.setText(Integer.toString(solution));  // this is where eventually we will pass in the solution which is worked out in the model  so it can be displayed to the user.
+
+    	
+    }
+    
+    void addCalculateListener(ActionListener listenForCalcButton){   // a listener that executes a method in the controller called listenForCalcButton when the button is clicked.
+    	
+        calculateButton.addActionListener(listenForCalcButton);
+
+    	
+    }
+    
+    void displayErrorMessage(String errorMessage){
+    	
+        JOptionPane.showMessageDialog(this, errorMessage);  //  built in method of the J option package that can display error for you
+
+    	
+    }
+
+    
+
+    
+    
+    	
+    }
+    
+
  
-
-
-
-
-	
-
-}
+ 
